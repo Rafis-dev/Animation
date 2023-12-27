@@ -37,12 +37,12 @@
   width: 70px;
   height: 40px;
   background-color: #ec9109;
-  animation: animation-2 3s infinite ease-in-out alternate;
+  animation: animation-2 3s infinite ease-in-out alternate paused;
   margin-bottom: 100px;
 }
 
 .animation-2:hover {
-  animation-play-state: paused;
+  animation-play-state: running;
 }
 
 @keyframes animation-2 {
