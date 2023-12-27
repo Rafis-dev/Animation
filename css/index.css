@@ -1,0 +1,129 @@
+@import "global.css";
+
+
+.container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.animation-1 {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  height: 20px;
+  border: 1px solid #28fd28;
+  margin-bottom: 100px;
+}
+
+.animation-1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 95%;
+  background-color: #28fd28;
+  background-size: 20%;
+  animation: animation-1 3s ease-in-out forwards;
+}
+
+@keyframes animation-1 {
+  to {
+    right: 10%;
+  }
+}
+
+.animation-2 {
+  width: 70px;
+  height: 40px;
+  background-color: #ec9109;
+  animation: animation-2 3s infinite ease-in-out alternate;
+  margin-bottom: 100px;
+}
+
+.animation-2:hover {
+  animation-play-state: paused;
+}
+
+@keyframes animation-2 {
+  to {
+    width: 100%;
+  }
+}
+
+.animation-3 {
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  border: 1px solid blue;
+  position: relative;
+}
+
+.ball {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  transform: translate(-100%, -100%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: blue;
+  animation: fall 5s infinite linear, toRight 5s infinite linear;
+}
+
+@keyframes fall {
+  from {
+    top: 20px;
+  }
+
+  40% {
+    top: 100%;
+  }
+
+  45% {
+    top: 65%;
+  }
+
+  57% {
+    top: 100%;
+  }
+
+  62% {
+    top: 85%;
+  }
+
+  70% {
+    top: 100%;
+  }
+
+  77% {
+    top: 90%;
+  }
+
+  82% {
+    top: 100%;
+  }
+
+  90% {
+    top: 95%;
+  }
+
+  100% {
+    top: 100%;
+  }
+
+}
+
+@keyframes toRight {
+  from {
+    left: 20px;
+  }
+
+  50% {
+    left: 40%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
